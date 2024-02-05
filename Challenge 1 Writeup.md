@@ -55,7 +55,7 @@ app.listen(3000, () => {
 
 ## Solution
 
-#### Understanding the code
+### Understanding the code
 
 First of all we see that the server runs on the `express` web framework, the code seems to first check if there is the key `token` in the request body, if that's missing, it responds with an error stating : `Token missing`.
 
@@ -63,7 +63,7 @@ However, if the token exists, it attempts to verify it with the variable `SECRET
 
 if the token was not succefully verified, we get the `Token invalid` response, otherwise the code performs a second check after POST requesting the `/flag` endpoint which is verifying the content of the token's data, it checks if the key `access` includes the value `flag`, if that's the case we solve the challenge, otherwise we get this error `🚨 🚨 🚨 You've been caught by the access control police! 🚓 🚓 🚓`.
 
-#### Solving the challenge
+### Solving the challenge
 
 so our goal here is to forge a JWT token that will contain this in the body :
 
