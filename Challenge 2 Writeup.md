@@ -46,7 +46,7 @@ http {
 
 ## Solution
 
-#### Understanding the configuration
+### Understanding the configuration
 
 First we know that the application is running on `nginx`, and we know that the root directory of this app is in `/usr/share/nginx/html` as stated in this block :
 
@@ -81,7 +81,7 @@ The `deny all;` directive denies access to this specific file for all clients. I
 
 ![denied](images/chal2/denied.png)
 
-#### Solving the challenge
+### Solving the challenge
 
 Since the path `/assets` uses the alias directive to map the URI to a local directory, we can perform a trick which is `directory traversal` to traverse to our target file which is `/flag.html`.
 
