@@ -54,7 +54,7 @@ if __name__ == '__main__':
 
 ## Solution
 
-#### Understanding the code
+### Understanding the code
 
 This appears to be a `Flask` web application, starts by creating a class named `Profile` that represents user profiles. It has attributes such as `username`, `email`, and `bio`.
 
@@ -62,7 +62,7 @@ The main route of interest is `/profile`, which handles both `GET` and `POST` re
 
 If the request is a `GET` request and includes a `load_object` parameter, the code attempts to deserialize the object from base64. If successful, it renders the `profile.html` template with the loaded profile.
 
-#### Solving the challenge
+### Solving the challenge
 
 We already spot the interesting part of this code which is the fact that we can pass serialized objects in the GET parameter `load_object` and the app just deserialize it without any checks.
 
